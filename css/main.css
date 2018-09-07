@@ -445,16 +445,16 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: 700px;
+  width: 100%;
 }
 @media (min-width: 1200px) {
   .container .header-inner {
-    width: 800px;
+    width: 100%;
   }
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 900px;
+    width: 100%;
   }
 }
 .main {
@@ -462,16 +462,16 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 700px;
+  width: 100%;
 }
 @media (min-width: 1200px) {
   .container .main-inner {
-    width: 800px;
+    width: 100%;
   }
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 900px;
+    width: 100%;
   }
 }
 .footer {
@@ -484,16 +484,16 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 700px;
+  width: 100%;
 }
 @media (min-width: 1200px) {
   .container .footer-inner {
-    width: 800px;
+    width: 100%;
   }
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 900px;
+    width: 100%;
   }
 }
 pre,
@@ -1838,7 +1838,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9c0614;
+  background: #90ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2606,8 +2606,7 @@ pre .deletion {
   padding-bottom: 0px;
 }
 .posts-expand {
-  padding-top: 80px;
-  width: 1600px;
+  padding-top: 0px;
 }
 .posts-expand .post-meta {
   margin: 5px 0px 0px 0px;
@@ -2650,8 +2649,8 @@ pre .deletion {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 5px;
-  background-color: rgba(255,255,255,0.75);
-  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.15);
+  background-color: #fff;
+  box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.15);
 }
 .menu .menu-item a {
   font-size: 15px;
@@ -2674,9 +2673,6 @@ pre .deletion {
   font-size: 26px;
   font-weight: 700;
   text-align: left;
-}
-.posts-expand .post-title-link::before {
-  background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
 }
 .posts-expand .post-meta {
   margin: 10px 0px 20px 0px;
@@ -2729,7 +2725,8 @@ pre .deletion {
 }
 .footer {
   line-height: 1.5;
-  background-color: rgba(255,255,255,0.75);
+  bottom: auto;
+  background-color: #fff;
   color: #333;
   border-top-width: 3px;
   border-top-style: solid;
@@ -2750,26 +2747,31 @@ pre .deletion {
   margin: 0 0 0 0;
 }
 .posts-expand .post-body {
-  width: 45%;
+  width: 70%;
 }
 .posts-home {
   padding-top: 80px;
-  width: 1600px;
+  width: 100%;
 }
 .posts-home .post-meta {
   margin: 5px 0px 0px 0px;
-  text-align: left;
+  text-align: center;
 }
 .posts-home .post-title {
   font-size: 26px;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
+}
+.posts-home .post-title-link {
+  display: inline-block;
+  position: relative;
+  color: #555;
+  border-bottom: none;
+  line-height: 1.2;
+  vertical-align: top;
 }
 .posts-home .post-title-link::before {
   background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
-}
-.posts-home .post-meta {
-  margin: 10px 0px 20px 0px;
 }
 .posts-home .post-meta .post-description {
   font-style: italic;
@@ -2777,4 +2779,12 @@ pre .deletion {
   margin-top: 30px;
   margin-bottom: 0px;
   color: #666;
+}
+.posts-expand .post-tags {
+  margin-top: 40px;
+  text-align: left;
+}
+.main-inner-home {
+  width: 980px;
+  margin: 0 auto;
 }
