@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/mnist_top_left_feature.png">
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/mnist_other_features.png">
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/mnist_complete_zero.png">
-<meta property="og:updated_time" content="2018-09-07T09:15:03.170Z">
+<meta property="og:updated_time" content="2018-09-07T09:19:42.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="神经网络和深度学习 第一章（翻译）">
 <meta name="twitter:description" content="本文翻译自 Michael Nielson 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
@@ -390,7 +390,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-07 17:15:03" itemprop="dateModified" datetime="2018-09-07T17:15:03+08:00">2018-09-07</time>
+                <time title="修改时间：2018-09-07 17:19:42" itemprop="dateModified" datetime="2018-09-07T17:19:42+08:00">2018-09-07</time>
               
             
           </span>
@@ -522,8 +522,7 @@ output = \left\{
 <h4 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h4><ul>
 <li><p><strong>用 sigmoid 神经元模拟感知器（第一部分）</strong><br>假设我们将感知器网络中所有的权重和偏置都乘上一个正的常数 $ c &gt; 0$。证明网络的行为不会发生变化。  </p>
 </li>
-<li><p><strong>用 sigmoid 神经元模拟感知器（第二部分）</strong>  </p>
-<p>假设起始我们与上题一样，有一个感知器网络。同时假设网络的输入是给定的，这里不需要给定具体的输入值，只要求输入是我们想要的样子。这个网络中的任何感知器，对此输入 $ x $，其权重和偏置都满足 $ w \cdot x + b \neq 0 $ 。现在，将网络中的所有感知器都替换为 sigmoid 神经元，然后将所有权重和偏置都乘上一个正的常数 $ c &gt; 0 $ 。证明当极限 $ c \rightarrow \infty $ 成立时，这个 sigmoid 网络的行为与之前的感知器网络完全相同。而如果有任一感知器满足 $ w \cdot x + b = 0 $ ，这一结论就不成立了，为什么呢？  </p>
+<li><p><strong>用 sigmoid 神经元模拟感知器（第二部分）</strong><br>假设起始我们与上题一样，有一个感知器网络。同时假设网络的输入是给定的，这里不需要给定具体的输入值，只要求输入是我们想要的样子。这个网络中的任何感知器，对此输入 $ x $，其权重和偏置都满足 $ w \cdot x + b \neq 0 $ 。现在，将网络中的所有感知器都替换为 sigmoid 神经元，然后将所有权重和偏置都乘上一个正的常数 $ c &gt; 0 $ 。证明当极限 $ c \rightarrow \infty $ 成立时，这个 sigmoid 网络的行为与之前的感知器网络完全相同。而如果有任一感知器满足 $ w \cdot x + b = 0 $ ，这一结论就不成立了，为什么呢？  </p>
 </li>
 </ul>
 <h3 id="1-3-神经网络的架构"><a href="#1-3-神经网络的架构" class="headerlink" title="1.3. 神经网络的架构"></a>1.3. 神经网络的架构</h3><p>在下一节中我将介绍一个能很好地分类手写数字的神经网络。作为准备工作，有必要解释一下我们用来给一个网络的不同部分命名的术语。假设我们有这样的网络：  </p>
@@ -541,7 +540,7 @@ output = \left\{
 <p>分成六张独立的图片  </p>
 <img src="/images/nndl-chapter1/digits_separate.png" width="400" height="50" title="digits_separate">   
 <p>我们人类很轻松就能解决这个图片的分割问题，但对于一个计算机程序来说，正确地将图片分割开会是一个挑战。一旦这张图片被分割开，之后程序就需要对每一个数字进行分类。举例来说，我们希望我们的程序识别上面的第一个数字，  </p>
-<img src="/images/nndl-chapter1/mnist_first_digit.png" width="50" title="50mnist_first_digit">  
+<img src="/images/nndl-chapter1/mnist_first_digit.png" width="100" height="100" title="mnist_first_digit">  
 <p>为一个 $5$ 。  </p>
 <p>我们将关注如何写一个程序来解决第二个问题，也就是，识别单独的数字。我们这样做因为，事实上分割问题不是那么困难，如果你能够很好地解决分类单独数字的话。有很多种解决分割问题的方法。一种方法是，尝试多种不同的分割图片的方式，对其结果，使用单独数字的分类器来评分。一个图片分割的结果，当单独数字的分类器能对其每个分割段都有确定的分类输出，会得到更高的评分；而当单独数字的分类器在对其中一个或者几个分割段遇到分类的困难时，这个分割方式就只能得到一个低分。其思想就是，如果分类器在某个地方遇到困难，可能是因为分割方式选择得不正确。这个思想和它的一些变种在用来解决分割问题上的效果还不错。所以与其担心分割问题，我们将集中注意力于开发一个神经网络来解决更有趣和困难的问题，亦即，识别单独的手写数字。  </p>
 <p>为了识别单独的数字，我们将会使用三层结构的神经网络：  </p>
