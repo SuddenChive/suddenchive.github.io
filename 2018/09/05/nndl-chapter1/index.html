@@ -108,13 +108,13 @@
 
 
 
-  <meta name="description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
+  <meta name="description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielsen 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
 <meta name="keywords" content="translation,deep learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="神经网络和深度学习 第一章（翻译）">
 <meta property="og:url" content="https://suddenchive.github.io/2018/09/05/nndl-chapter1/index.html">
 <meta property="og:site_name" content="SuddenChive">
-<meta property="og:description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
+<meta property="og:description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielsen 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/digits.png">
 <meta property="og:image" content="https://suddenchive.github.io/2018/09/05/nndl-chapter1/mnist_100_digits.png">
@@ -141,10 +141,10 @@
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/mnist_complete_zero.png">
 <meta property="og:image" content="https://suddenchive.github.io/2018/09/05/nndl-chapter1/tikz13.png">
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/digits_separate.png">
-<meta property="og:updated_time" content="2018-09-13T07:52:07.926Z">
+<meta property="og:updated_time" content="2018-09-13T07:55:25.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="神经网络和深度学习 第一章（翻译）">
-<meta name="twitter:description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
+<meta name="twitter:description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielsen 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
 <meta name="twitter:image" content="https://suddenchive.github.io/images/nndl-chapter1/digits.png">
 
 
@@ -392,7 +392,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-13 15:52:07" itemprop="dateModified" datetime="2018-09-13T15:52:07+08:00">2018-09-13</time>
+                <time title="修改时间：2018-09-13 15:55:25" itemprop="dateModified" datetime="2018-09-13T15:55:25+08:00">2018-09-13</time>
               
             
           </span>
@@ -425,7 +425,7 @@
       
 
       
-        <p>本文翻译自 <a href="http://michaelnielsen.org/" target="_blank" rel="noopener">Michael Nielsen</a> 的在线书籍 <a href="http://neuralnetworksanddeeplearning.com" target="_blank" rel="noopener">Neural Network and Deep Learning</a>。感谢 Nielson 为我们带来如此全面高质量的内容。</p>
+        <p>本文翻译自 <a href="http://michaelnielsen.org/" target="_blank" rel="noopener">Michael Nielsen</a> 的在线书籍 <a href="http://neuralnetworksanddeeplearning.com" target="_blank" rel="noopener">Neural Network and Deep Learning</a>。感谢 Nielsen 为我们带来如此全面高质量的内容。</p>
 <h2 id="1-使用神经网络来识别手写数字"><a href="#1-使用神经网络来识别手写数字" class="headerlink" title="1. 使用神经网络来识别手写数字"></a>1. 使用神经网络来识别手写数字</h2><p>人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：  </p>
 <img src="/images/nndl-chapter1/digits.png" width="300" height="50" title="digits"> 
 <p>大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主要的视觉皮层，常被称为 $V1$，其包含了 $1.4$ 亿个神经元以及这些神经元之间数百亿个连接。然而人类视觉不仅仅包含 $V1$，还有一整套的视觉皮层—— $V2, V3, V4$ 和 $V5$ ——  以完成逐渐复杂的图像处理任务。我们头上其实是顶了一台超级计算机的，这台超级计算机进过了 $1$ 亿年的进化演变，从而擅长理解视觉的世界。辨认手写的数字从不是一件容易的事情。<a id="more"></a>更准确地说，我们人类意外地擅长于使眼睛展现给我们的东西变得合理。但是这一切工作都是无意识就完成的，所以我们并不会感激我们的视觉系统解决了多么困难的问题。  </p>
