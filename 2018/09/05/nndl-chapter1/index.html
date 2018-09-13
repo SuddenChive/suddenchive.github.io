@@ -108,13 +108,13 @@
 
 
 
-  <meta name="description" content="本文翻译自 Michael Nielson 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
+  <meta name="description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
 <meta name="keywords" content="translation,deep learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="神经网络和深度学习 第一章（翻译）">
 <meta property="og:url" content="https://suddenchive.github.io/2018/09/05/nndl-chapter1/index.html">
 <meta property="og:site_name" content="SuddenChive">
-<meta property="og:description" content="本文翻译自 Michael Nielson 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
+<meta property="og:description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/digits.png">
 <meta property="og:image" content="https://suddenchive.github.io/2018/09/05/nndl-chapter1/mnist_100_digits.png">
@@ -139,10 +139,12 @@
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/mnist_top_left_feature.png">
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/mnist_other_features.png">
 <meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/mnist_complete_zero.png">
-<meta property="og:updated_time" content="2018-09-07T09:19:42.004Z">
+<meta property="og:image" content="https://suddenchive.github.io/2018/09/05/nndl-chapter1/tikz13.png">
+<meta property="og:image" content="https://suddenchive.github.io/images/nndl-chapter1/digits_separate.png">
+<meta property="og:updated_time" content="2018-09-13T07:52:07.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="神经网络和深度学习 第一章（翻译）">
-<meta name="twitter:description" content="本文翻译自 Michael Nielson 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
+<meta name="twitter:description" content="本文翻译自 Michael Nielsen 的在线书籍 Neural Network and Deep Learning。感谢 Nielson 为我们带来如此全面高质量的内容。 1. 使用神经网络来识别手写数字人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：     大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主">
 <meta name="twitter:image" content="https://suddenchive.github.io/images/nndl-chapter1/digits.png">
 
 
@@ -390,7 +392,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-07 17:19:42" itemprop="dateModified" datetime="2018-09-07T17:19:42+08:00">2018-09-07</time>
+                <time title="修改时间：2018-09-13 15:52:07" itemprop="dateModified" datetime="2018-09-13T15:52:07+08:00">2018-09-13</time>
               
             
           </span>
@@ -423,7 +425,7 @@
       
 
       
-        <p>本文翻译自 <a href="http://michaelnielsen.org/" target="_blank" rel="noopener">Michael Nielson</a> 的在线书籍 <a href="http://neuralnetworksanddeeplearning.com" target="_blank" rel="noopener">Neural Network and Deep Learning</a>。感谢 Nielson 为我们带来如此全面高质量的内容。</p>
+        <p>本文翻译自 <a href="http://michaelnielsen.org/" target="_blank" rel="noopener">Michael Nielsen</a> 的在线书籍 <a href="http://neuralnetworksanddeeplearning.com" target="_blank" rel="noopener">Neural Network and Deep Learning</a>。感谢 Nielson 为我们带来如此全面高质量的内容。</p>
 <h2 id="1-使用神经网络来识别手写数字"><a href="#1-使用神经网络来识别手写数字" class="headerlink" title="1. 使用神经网络来识别手写数字"></a>1. 使用神经网络来识别手写数字</h2><p>人类的视觉系统是这个世界上的奇迹之一。考虑如下的手写数字的序列：  </p>
 <img src="/images/nndl-chapter1/digits.png" width="300" height="50" title="digits"> 
 <p>大多数人都能很轻易地辨认出这些数字为 $504192$ 。这种轻易是很具有欺骗性的。在我们大脑的每个半球，都有一个主要的视觉皮层，常被称为 $V1$，其包含了 $1.4$ 亿个神经元以及这些神经元之间数百亿个连接。然而人类视觉不仅仅包含 $V1$，还有一整套的视觉皮层—— $V2, V3, V4$ 和 $V5$ ——  以完成逐渐复杂的图像处理任务。我们头上其实是顶了一台超级计算机的，这台超级计算机进过了 $1$ 亿年的进化演变，从而擅长理解视觉的世界。辨认手写的数字从不是一件容易的事情。<a id="more"></a>更准确地说，我们人类意外地擅长于使眼睛展现给我们的东西变得合理。但是这一切工作都是无意识就完成的，所以我们并不会感激我们的视觉系统解决了多么困难的问题。  </p>
@@ -559,8 +561,19 @@ output = \left\{
 <p>假设神经网络是这样工作的，那么我们就能对为什么要有 $10$ 个输出神经元，而不是 $4$ 个，给出一个合理的解释了。如果我们只有 $4$ 个输出神经元，那么第一个输出神经元将要试图确定输入数字的最高位的数值是多少。而将最高位的数值和上面所展示的这种简单图形对应起来可不是一件容易的事儿。很难想象有什么好的历史原因让我们将数字的部分形状与它的最高位数值联系起来。  </p>
 <p>现在，说的这些，也只是一个启发式的假想。没有证据表明，三层结构的神经网络就像我所描述的那样工作，即隐藏层神经元来检测简单的部分形状。或许存在一个聪明的学习算法能找出权重的数值从而让我们能只使用 $4$ 个输出神经元。但作为一个启发式的想法，思考我所描述的内容能起到很好的效果，也能让你在设计好的神经网络架构上省去很多的时间。  </p>
 <h4 id="练习-1"><a href="#练习-1" class="headerlink" title="练习"></a>练习</h4><ul>
-<li>有一种方法，通过在上述三层结构的网络中增加一层额外的神经元从而能够确定输入数字的二进制表达。这个额外的神经层将前一层的输出转换成一个二进制表达，如下图所示。找到这样的输出层的一组权重和偏置。假设前三层神经元能使得第三层（也就是之前的输出层）的正确输出的激活值至少大于 $0.99$，而不正确的输出，其激活值低于 $0.01$ 。  </li>
+<li>有一种方法，通过在上述三层结构的网络中增加一层额外的神经元从而能够确定输入数字的二进制表达。这个额外的神经层将前一层的输出转换成一个二进制表达，如下图所示。找到这样的输出层的一组权重和偏置。假设前三层神经元能使得第三层（也就是之前的输出层）的正确输出的激活值至少大于 $0.99$，而不正确的输出，其激活值低于 $0.01​$ 。  </li>
 </ul>
+<img src="/2018/09/05/nndl-chapter1/tikz13.png" title="tikz13">
+<h3 id="使用梯度下降来学习"><a href="#使用梯度下降来学习" class="headerlink" title="使用梯度下降来学习"></a>使用梯度下降来学习</h3><p>现在，在设计了我们自己的神经网络之后，怎么让它学习识别数字呢？首先，我们需要的是一个拿来学习的数据集——也被称为训练数据集。我们将使用 <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="noopener">MNIST 数据集</a>，其包含了几万张手写数字的扫描图片，和它们对应的正确分类。MNIST 这个名字来源于，它是由 <a href="https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" target="_blank" rel="noopener">NIST</a> （美国国家标准技术研究所）收集的两个数据集上修改得来的。以下是 MNIST 里的一些图片：  </p>
+<img src="/images/nndl-chapter1/digits_separate.png" width="400" height="50" title="digits_separate">  
+<p>正如你所看到的，这些数字事实上与本章刚开始作为识别的任务所展示的那些数字一样。当然，测试神经网络的时候，我们会让它来识别那些不在我们的训练集中的图片！  </p>
+<p>MNIST 数据集分为两个部分。第一部分包含 $60,000$ 张图片，被用来作为训练数据。这些图片由 $250$ 个人的手写样本扫描得来，其中一半的人是美国人口普查局的员工，另一半是高中学生。这些图片都是灰度图并且分辨率为 $28 \ast 28$。第二部分是用来作为测试数据的 $10,000$ 张图片。同样，它们也是 $28 \ast 28$ 的灰度图。我们将使用这些测试数据来评估我们的神经网络学习识别数字的效果好坏。为了让这种性能测试更有效，测试数据取自与训练数据不同的 $250$ 个人（即使他们也还是人口普查局员工和高中学生）。这能让我们确信，我们的系统能识别那些在训练时没见过的人的手写数字样本。  </p>
+<p>我们将用 $x$ 表示一个训练样本输入。方便起见，将每个训练输入都看作是 $28 \times 28 = 784$ - 维的向量。向量的每个维度都表示图片中对应像素点的灰度值。用 $y = y(x)$ 表示与输入对应的期望输出，其中 $y$ 是一个 $10$-维向量。例如，一个给定的训练图片 $x$，描绘的是数字 $6$，那么， $y(x) = (0, 0, 0, 0, 0, 0, 1, 0, 0, 0)^T$ 就是网络的期望输出。$T$ 是转置操作符，将一个行向量转换成对应的列向量。  </p>
+<p>我们想要的是一个这样的算法，它让我们找到能使得网络对所有训练输入 $x$ 都能近似输出 $y(x)$ 的权重和偏置。为了量化我们达到这个目标的程度，定义一个代价函数*<span class="marginnote">* 有时我们把它称为损失函数或者目标函数。本书中将使用代价函数的说法，但你需要了解其他的术语，因为它们经常会在神经网络的研究论文和讨论中使用到。</span>：</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray} 
+C(w,b) \equiv \frac{1}{2n} \sum_x \| y(x) - a\|^2. \tag{6}
+\end{eqnarray}</script><p>其中，$w$ 表示网络中所有权重的集合，$b$ 表示全部的偏置，$n$ 是训练输入的总量，$a$ 是当输入为 $x$ 时网络的输出向量，并且，求和是对于所有训练输入 $x$ 而言的。当然，输出 $a$ 取决于 $x, w$ 和 $b$，但出于书写简洁的考虑我没有展现这一依赖关系。记号 $| v |$ 指的是向量 $v$ 的长度。我们称这样的 $C$ 为二次代价函数，有时也被称为_平均平方误差_或简称为 MSE (mean squared error) 。观察二次代价函数的形式，我们发现，$ C(w, b) $ 的值非负，因为求和的每一项都非负。而且，代价 $ C(w, b) $ 的值会很小，即 $ C(w, b) \approx 0 $，仅当 $ y(x) $ 与输出 $a$ 对于所有的训练输入 $x$ 都近似相等时。所以如果我们的算法找到了使得 $ C(w, b) \approx 0 $ 的权重和偏置时，它的表现就算很好。相反地，如果 $ C(w, b) $ 很大，算法的表现就不佳，因为这意味着对于很多输入， $ y(x) $ 与输入 $a$ 都有很大区别。所以我们的训练算法的目标就是最小化这个关于权重和偏置的代价函数 $ C(w, b) $ 。换句话说，我们想找到一个权重和偏置的集合，使得代价尽可能的小。我们将使用被称为梯度下降的算法来做到这一点。  </p>
 <p>（未完待续）</p>
 <p>其它章节如下：  </p>
 <p><a href="https://suddenchive.github.io/2018/09/01/nndl-chapter0/">神经网络与深度学习 前言（翻译）</a>  </p>
